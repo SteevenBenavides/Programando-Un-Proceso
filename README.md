@@ -1,7 +1,7 @@
 # Simulador de Planificación de Procesos
 
 Este proyecto es un programa hecho en **Java con Swing** que sirve para simular algoritmos de planificación de procesos.  
-La idea es poder agregar procesos, elegir un algoritmo (como FCFS, SJF, RR, etc.) y ver cómo se ejecutan y cuáles son sus resultados.
+La idea es poder agregar procesos, elegir un algoritmo (FCFS, SJF, RR) y ver cómo se ejecutan y cuáles son sus resultados.
 
 ---
 
