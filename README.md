@@ -1,91 +1,71 @@
-# Programando-Un-Proceso
-
 # Simulador de Planificación de Procesos
 
-Este proyecto es una aplicación en **Java Swing** que simula algoritmos de planificación de procesos (como **FCFS**, **SJF**, **Round Robin**, etc.).  
-La interfaz gráfica permite agregar procesos, ejecutar la simulación y visualizar los resultados de manera clara y ordenada.  
+Este proyecto es un programa hecho en **Java con Swing** que sirve para simular algoritmos de planificación de procesos.  
+La idea es poder agregar procesos, elegir un algoritmo (como FCFS, SJF, RR, etc.) y ver cómo se ejecutan y cuáles son sus resultados.
 
 ---
 
-## 🖼️ Interfaz Gráfica
+## Interfaz del programa
 
-![Interfaz del Simulador](CapturaSwing.PNG)
+La ventana está dividida en varias partes:
 
-La interfaz está dividida en varias secciones:
-
-### 1. Control de Simulación (parte superior)
-- **Algoritmo:** Menú desplegable para seleccionar el algoritmo de planificación.  
-- **Quantum:** Campo editable que solo se usa en Round Robin.  
-- **Botón "Iniciar Simulación":** Comienza la ejecución de los procesos.  
-- **Botón "Reiniciar Procesos":** Limpia todos los procesos y tablas.  
-- **Proceso en ejecución:** Muestra qué proceso se está ejecutando actualmente.  
-- **Tiempo:** Contador del tiempo de simulación.  
+### 1. Controles de simulación
+Arriba están las opciones principales:
+- Se puede escoger el **algoritmo** a usar.  
+- El campo de **quantum** solo se usa si elegimos Round Robin.  
+- Hay un botón para **iniciar la simulación** y otro para **reiniciar**.  
+- También muestra cuál proceso se está ejecutando y el tiempo actual de la simulación.  
 
 ---
 
-### 2. Formulario de creación de procesos
-Campos para ingresar manualmente la información de cada proceso:
-- **PID:** Identificador del proceso.  
-- **Nombre:** Nombre del proceso.  
-- **Llegada:** Tiempo de llegada (AT).  
-- **Duración:** Tiempo de ráfaga o Burst Time (BT).  
-- **Prioridad:** Nivel de prioridad (si aplica).  
+### 2. Formulario para agregar procesos
+Aquí se escriben los datos de cada proceso:
+- **PID:** Identificador.  
+- **Nombre:** El nombre del proceso.  
+- **Llegada:** El tiempo en que entra.  
+- **Duración:** Cuánto tarda en ejecutarse.  
+- **Prioridad:** Nivel de prioridad.  
 
-Luego, con el botón **Agregar Proceso**, el proceso aparece en la tabla de la izquierda.  
-
----
-
-### 3. Tabla de Procesos (izquierda)
-- Muestra todos los procesos creados con sus atributos:  
-  - PID  
-  - Nombre  
-  - Estado  
-  - Duración (BT)  
-  - Restante (tiempo de ejecución pendiente)  
-  - Progreso (barra visual de avance)  
+Con el botón **Agregar Proceso**, se manda a la tabla de la izquierda.
 
 ---
 
-### 4. Cola de Procesos Listos (centro)
-- Representa los procesos que están en **estado READY**.  
-- Incluye columnas con:
-  - PID  
-  - Nombre  
-  - Estado  
-  - Llegada (AT)  
-  - Restante  
-  - Prioridad  
-- Abajo indica cuántos procesos hay en la cola.  
+### 3. Tabla de procesos (izquierda)
+Muestra todos los procesos que agregamos. Cada uno aparece con:
+- PID, nombre, estado, duración, tiempo restante y el progreso con una barrita.
 
 ---
 
-### 5. Resultados del Algoritmo (derecha)
-- Muestra las métricas finales de cada proceso después de la simulación:  
-  - **Proceso**  
-  - **AT** (Arrival Time)  
-  - **BT** (Burst Time)  
-  - **CT** (Completion Time)  
-  - **TAT** (Turnaround Time)  
-  - **WT** (Waiting Time)  
+### 4. Cola de listos (centro)
+Aquí se ven los procesos que están en estado **READY**.  
+Abajo muestra cuántos procesos hay en la cola o si está vacía.
 
 ---
 
-### 6. Consola de mensajes (parte inferior)
-- Muestra registros de las acciones realizadas, por ejemplo:  
-  - Proceso agregado  
-  - Estado del sistema  
-  - Mensajes de la simulación  
+### 5. Resultados (derecha)
+Cuando la simulación termina, se llenan los resultados:
+- **AT**: tiempo de llegada.  
+- **BT**: duración.  
+- **CT**: tiempo de finalización.  
+- **TAT**: tiempo de retorno.  
+- **WT**: tiempo de espera.  
 
 ---
 
-## 🚀 Ejecución
-1. Compila el proyecto en Eclipse o cualquier IDE de Java.  
-2. Ejecuta la clase principal (`Main` o la que contenga el método `main`).  
-3. Agrega procesos, selecciona un algoritmo y haz clic en **Iniciar Simulación**.  
+### 6. Consola de mensajes
+En la parte de abajo salen mensajes como “proceso agregado” o cambios de estado.
 
 ---
 
-## 📌 Notas
-- El campo **Quantum** solo se activa si el algoritmo elegido es **Round Robin**.  
-- Los procesos se ejecutan de acuerdo al algoritmo seleccionado.  
-- Puedes reiniciar la simulación en cualquier momento con el botón correspondiente.  
+## Cómo usarlo
+1. Ejecutar el programa en Eclipse (o cualquier IDE de Java).  
+2. Agregar procesos con el formulario.  
+3. Elegir un algoritmo y darle en **Iniciar Simulación**.  
+4. Ver cómo cambian las tablas y los resultados.  
+5. Si quieres empezar de nuevo, usar el botón de **Reiniciar Procesos**.  
+
+---
+
+## Nota
+- El quantum solo funciona si se usa **Round Robin**.  
+- Los procesos siguen el orden del algoritmo que se escoja.  
